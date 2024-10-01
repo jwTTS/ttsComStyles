@@ -114,7 +114,7 @@ assertreflect = np.mean(arVals)
 
 js = .1
 plt = go.Figure()
-plt.add_trace(go.Scatter(x=[peopletask], y=[assertreflect],
+plt.add_trace(go.Scatter(x=[assertreflect], y=[peopletask],
                          mode='markers',
                          marker=dict(color='#027D07',
                                      size=20),
