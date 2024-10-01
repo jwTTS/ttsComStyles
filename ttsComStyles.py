@@ -114,7 +114,7 @@ plt.add_trace(go.Scatter(x=[peopletask], y=[assertreflect],
                          marker=dict(color='#027D07',
                                      size=15),
                          name='Average of All Responses',
-                         hoverinfo='skip'))
+                         hovertemplate='<b>Average of All Responses</b>'))
 plt.add_trace(go.Scatter(x=[x + np.random.uniform(-js,js) for x in arVals],
                          y=[0 + np.random.uniform(-js,js) for y in range(5)], 
                          mode='markers',
