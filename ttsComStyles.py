@@ -6,7 +6,12 @@ import numpy as np
 
 #%% Headings
 
-st.header('Training The Street communication styles tool')
+col1, col2 = st.columns(2)
+
+with col1:
+    st.image('https://b3597743.smushcdn.com/3597743/wp-content/uploads/2023/03/TrainingTheStreet_Wide.png?lossy=1&strip=1&webp=1')
+with col2:
+    st.header('Communication Style Tool')
 
 #%% Set lists for options
 
