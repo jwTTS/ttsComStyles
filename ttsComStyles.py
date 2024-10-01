@@ -4,6 +4,10 @@ import plotly.graph_objects as go
 import streamlit as st
 import numpy as np
 
+#%% Headings
+
+st.header('Training The Street communication styles tool')
+
 #%% Set lists for options
 
 listSpeakVol = {'Low speaking volume': -2,
@@ -112,7 +116,7 @@ plt = go.Figure()
 plt.add_trace(go.Scatter(x=[peopletask], y=[assertreflect],
                          mode='markers',
                          marker=dict(color='#027D07',
-                                     size=15),
+                                     size=20),
                          name='Average of All Responses',
                          hovertemplate='<b>Average of All Responses</b><extra></extra>'))
 plt.add_trace(go.Scatter(x=[x + np.random.uniform(-js,js) for x in arVals],
