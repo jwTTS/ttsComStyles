@@ -148,4 +148,5 @@ plt.update_layout(xaxis=dict(showgrid=False,
                              showticklabels=False),
                   showlegend=False)
 
-st.plotly_chart(plt)
+with st.expander('Expand to see your results for discussion in class'):
+    st.plotly_chart(plt)
