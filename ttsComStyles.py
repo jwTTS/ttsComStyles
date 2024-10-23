@@ -6,7 +6,7 @@ import numpy as np
 
 #%% Headings
 
-st.image('https://b3597743.smushcdn.com/3597743/wp-content/uploads/2023/03/TrainingTheStreet_Wide.png?lossy=1&strip=1&webp=1')
+st.image('TTS-full-horizontal.png')
 st.header('Communication Style Tool')
 
 #%% Set lists for options
