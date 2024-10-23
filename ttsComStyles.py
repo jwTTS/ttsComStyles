@@ -21,7 +21,7 @@ listConfront = {'Less confrontational': -2,
                 ' ': -1,
                 '  ': 0,
                 '   ': 1,
-                'Strong opinions': 2}
+                'Comfortable with confrontation': 2}
 
 listDecisive = {'Take time and ask for help to make decisions': -2, 
                 ' ': -1,
@@ -33,7 +33,7 @@ listDominate = {'Listen and encourage': -2,
                 ' ': -1,
                 '  ': 0,
                 '   ': 1,
-                'Dominate conversation': 2}
+                'Lead conversation': 2}
 
 listGesturing = {'Less gesturing': -2, 
                  ' ': -1,
@@ -41,11 +41,11 @@ listGesturing = {'Less gesturing': -2,
                  '   ': 1,
                  'More gesturing': 2}
 
-listExpressive = {'More expressive': -2, 
+listExpressive = {'Share thoughts & ideas freely': -2, 
                   ' ': -1,
                   '  ': 0,
                   '   ': 1,
-                  'Less expressive': 2}
+                  'Keep thoughts & ideas to myself': 2}
 
 listFacts = {'Use feelings to make decisions': -2, 
              ' ': -1,
@@ -59,11 +59,11 @@ listSerious = {'Casual, personal': -2,
                '   ': 1,
                'Formal, serious': 2}
 
-listInteraction = {'More interaction': -2,
+listInteraction = {'Prefer working with others': -2,
                    ' ': -1,
                    '  ': 0,
                    '   ': 1,
-                   'Less interaction': 2}
+                   'Prefer working alone': 2}
 
 listStructured = {'Less structured': -2, 
                   ' ': -1,
@@ -136,8 +136,53 @@ plt.add_trace(go.Scatter(x=[0 + np.random.uniform(-js,js) for x in range(5)],
                                      size=8),
                          name='Reflective vs. Assertive Responses',
                          hoverinfo='skip'))
-plt.update_xaxes(range=[-2.2, 2.2])
-plt.update_yaxes(range=[-2.2, 2.2])
+plt.add_annotation(x=2.3, y=0, 
+                   text='Direct,<br>faster<br>paced', 
+                   align='left', 
+                   showarrow=False,
+                   bgcolor='grey',
+                   width = 50,
+                   font=dict(color='white'))
+plt.add_annotation(x=-2.3, y=0, 
+                   text='Indirect,<br>slower<br>paced', 
+                   align='right', 
+                   showarrow=False,                 
+                   bgcolor='grey',
+                   width = 50,
+                   font=dict(color='white'))
+plt.add_annotation(x=0, y=2.3, 
+                   text='Guarded, task/goal focused', 
+                   align='center', 
+                   showarrow=False,
+                   bgcolor='grey',
+                   width = 200,
+                   font=dict(color='white'))
+plt.add_annotation(x=0, y=-2.3, 
+                   text='Open, relationship / people oriented', 
+                   align='center', 
+                   showarrow=False,
+                   bgcolor='grey',
+                   width = 200,
+                   font=dict(color='white'))
+plt.add_annotation(x=2.2, y=2.2, 
+                   text='<b>Dominance</b><br><i>Direct<br>Decisive<br>Results-Focused', 
+                   align='right', 
+                   showarrow=False)
+plt.add_annotation(x=-2.2, y=2.2, 
+                   text='<b>Conscientious</b><br><i>Prepared<br>Follows Rules<br>Process Driven', 
+                   align='left', 
+                   showarrow=False)
+plt.add_annotation(x=2.2, y=-2.2, 
+                   text='<b>Influence</b><br><i>Extroverted<br>Talkative<br>Brings Energy', 
+                   align='right', 
+                   showarrow=False)
+plt.add_annotation(x=-2.2, y=-2.2, 
+                   text='<b>Steadiness</b><br><i>Patient<br>Loyal<br>Team Focus', 
+                   align='left', 
+                   showarrow=False)
+
+plt.update_xaxes(range=[-2.5, 2.5])
+plt.update_yaxes(range=[-2.5, 2.5])
 plt.update_layout(xaxis=dict(showgrid=False, 
                              zerolinewidth=3,
                              zeroline=True,
